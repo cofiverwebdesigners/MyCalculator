@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyCalc</title>
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="mycss.css">
+</head>
+
+<body>
+
+	<!-- let me  have the  main  body  of the calculator-->
+	<div class="main_holder">
+		<div class="mycalc">
+			
+			<!-- let me  have the screen of my calculator-->
+			<div class="screen">
+				<input type="text" name="screen" id="my_screen">
+			
+			</div>
+			
+			<!--let me  have the place that  is going  to hold  my buttons-->
+			<div class="buttons">
+				<div>
+					<input type="button" value="AC" onclick="clearscreen()">
+					<input type="button" value="DE" onclick="DelRec()">
+					<input type="button" value="." onclick="addtoscreen('.')">
+					<input type="button" value="/" onclick="addtoscreen('/')">
+				</div>
+				
+				<div>
+					<input type="button" value="7" onclick="addtoscreen(7)">
+					<input type="button" value="8" onclick="addtoscreen(8)">
+					<input type="button" value="9" onclick="addtoscreen(9)">
+					<input type="button" value="x" onclick="addtoscreen('*')">
+				</div>
+				
+				<div>
+					<input type="button" value="4" onclick="addtoscreen(4)">
+					<input type="button" value="5" onclick="addtoscreen(5)">
+					<input type="button" value="6" onclick="addtoscreen(6)">
+					<input type="button" value="-" onclick="addtoscreen('-')">
+				</div>
+				
+				
+				<div>
+					<input type="button" value="1" onclick="addtoscreen(1)">
+					<input type="button" value="2" onclick="addtoscreen(2)">
+					<input type="button" value="3" onclick="addtoscreen(3)">
+					<input type="button" value="+" onclick="addtoscreen('+')">
+				</div>
+				
+				
+				<div>
+					<input type="button" value="00" onclick="addtoscreen(00)">
+					<input type="button" value="0" onclick="addtoscreen(0)">
+					<input type="button" value="=" onclick="calculate()">
+				</div>
+			
+			</div>
+		
+		</div>
+
+	</div>
+	
+<!-- let me add the javascript file to allow  me carry out calculations-->
+<script type="text/JavaScript" src="java.js"></script>
+
+</body>
+</html>
