@@ -1,7 +1,7 @@
 
 /* how my  calculator show up when viwed in a small screen */
 @media screen and (max-Width:800px){
-		.mycalc{
+	.mycalc{
 		background:#394452;
 		width:100%;
 		height:100vh;
@@ -29,12 +29,22 @@
 		height:10vh;
 		border-radius:10px;
 		cursor:pointer;
+		font-size:1.5em;
 	}
 	
 	.buttons{
 		margin-top:10%;
 	}
-	
+	.equal{
+		width:1%;
+	}
+	.operator{
+		background:green;
+		
+	}
+	#equals{
+		width:45%;
+	}
 	
 }
 
@@ -100,6 +110,14 @@
 	.buttons{
 		margin-left:5%;
 		margin-top:4%;
+	}
+	
+	.operator{
+		background:green;
+	}
+	
+	#equals{
+		width:45%;
 	}
 
 }
