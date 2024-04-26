@@ -4,8 +4,8 @@ screen=document.getElementById("my_screen");
 //let me sprecify a function that  will let me add a number to the screen
 
 function clearscreen(){
-	console.log("wathi");
 	screen.value ='';
+	
 	
 }
 
@@ -13,6 +13,13 @@ function clearscreen(){
 // let me  add a function that  will be erasing all the content  ffrom the 
 //calculator
 function addtoscreen(input){
+	s_v=screen.value
+	if (s_v==="No, Operands"|| s_v==="An Error Ocurred!"||s_v===''){
+		screen.value ='';
+		screen.style.color="black"
+		screen.style.fontSize="50px";
+	}
+		
 	screen.value+=input;
 }
 
@@ -24,13 +31,29 @@ function DelRec(){
 }
 
 //let me add another function to do the mathematical computation 
+
 function calculate(){
+	screen.style.color="black"
+	screen.style.fontSize="50px";
+	sc=document.getElementById("my_screen");
+	screen_value=sc.value
+	if ( screen_value.trim()===''){
+		screen.value="No, Operands"
+		screen.style.fontSize="30px";
+		screen.style.color="red"
+	}
+	else{
+	
 	try{
 		screen.value=eval(screen.value)
 	}
 	catch{
-		screen.value="Error"
+		screen.value="An Error Ocurred!"
+		screen.style.fontSize="30px";
+		screen.style.color="red"
 	}
+	}
+	
 }
 
 
@@ -138,3 +161,43 @@ m.addEventListener("click",function(){
 addtoscreen(m2)})
 
 
+
+
+
+
+//The Decreament and Increament Operators... 
+//The Increament Operator, increaments  by one 
+
+function increament(){
+	//let me get whatever is in my User's Screen First.
+	current_value=parseInt(screen.value);
+	screen.value=current_value+1
+}
+
+//Using function Increament. 
+
+increament_operator=document.getElementById("increament")
+increament_operator.addEventListener("click",function(){
+increament()})
+
+//Decreament Operator. 
+function decreament(){
+	//let me get whatever is in my User's Screen First.
+	current_value=parseInt(screen.value);
+	screen.value=current_value-1
+}
+
+//using Decreament Operatot Now. 
+decreament_operator=document.getElementById("decreament")
+decreament_operator.addEventListener("click",function(){
+decreament()})
+
+
+
+//let me enable that   modulus  operation to work now. 
+
+
+modulus=document.getElementById("modulus")
+modulus2=modulus.value
+modulus.addEventListener("click",function(){
+addtoscreen(modulus2)})
